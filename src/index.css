@@ -1,0 +1,218 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #fff5f8);
+  color: #2d2d2d;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffeaf1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff7aa2;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5c8d;
+}
+
+::selection {
+  background: #ff9db8;
+  color: white;
+}
+
+/* =========================
+   Root Variables
+========================= */
+
+:root {
+  --primary: #ff6b9d;
+  --secondary: #ff9cbc;
+  --light: #fff5f8;
+  --white: #ffffff;
+  --dark: #2d2d2d;
+  --shadow: 0 10px 30px rgba(255, 105, 150, 0.15);
+}
+
+/* =========================
+   Global Layout
+========================= */
+
+.app {
+  width: 100%;
+  position: relative;
+}
+
+.section {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding: 90px 0;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.section p {
+  line-height: 1.7;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.primary-btn,
+.secondary-btn,
+.quiz-btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #ff4f89;
+}
+
+.secondary-btn {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.secondary-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.card,
+.reason-card,
+.timeline-card,
+.quiz-card,
+.gallery-card,
+.letter-card {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   Floating Hearts
+========================= */
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -40px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Gallery minor change */
+.gallery-info p {
+  white-space: pre-line;
+}
