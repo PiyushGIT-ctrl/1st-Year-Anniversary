@@ -1,10 +1,10 @@
 import React from 'react';
-import photo1 from "../assets/images/photo1.jpg";
-import photo2 from "../assets/images/photo2.jpg";
-import photo3 from "../assets/images/photo3.jpg";
-import photo4 from "../assets/images/photo4.jpg";
-import photo5 from "../assets/images/photo5.jpg";
-import photo6 from "../assets/images/photo6.jpg";
+import photo1 from "../assets/Images/photo1.jpg";
+import photo2 from "../assets/Images/photo2.jpg";
+import photo3 from "../assets/Images/photo3.jpg";
+import photo4 from "../assets/Images/photo4.jpg";
+import photo5 from "../assets/Images/photo5.jpg";
+import photo6 from "../assets/Images/photo6.jpg";
 
 const memories = [
   {
